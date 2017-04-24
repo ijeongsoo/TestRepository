@@ -1,0 +1,16 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017. 4. 20, 오전 11:37:13
+    Author     : ijeongsu
+*/
+#btn1{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 10, 0, 5, 5);
+}
+
+#btn2{
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 10, 0, 5, 5.1);
+}

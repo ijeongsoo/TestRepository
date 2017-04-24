@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="63.0" prefWidth="141.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView id="image" fitHeight="51.0" fitWidth="50.0" layoutX="3.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+      <Label id="lbID" layoutX="78.0" layoutY="6.0" text="ID" />
+      <Label id="lbName" layoutX="72.0" layoutY="24.0" text="이름" />
+      <ImageView id="grade" fitHeight="17.0" fitWidth="77.0" layoutX="72.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

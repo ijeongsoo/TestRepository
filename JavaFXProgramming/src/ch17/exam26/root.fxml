@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch17.exam26.RootController">
+   <children>
+      <StackPane layoutX="24.0" layoutY="25.0" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="360.0" pickOnBounds="true">
+               <image>
+                  <Image url="@media/audio.png" />
+               </image>
+            </ImageView>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="360.0" preserveRatio="false" />
+         </children>
+      </StackPane>
+      <Button fx:id="btnPlay" disable="true" layoutX="404.0" layoutY="25.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="112.0" text="l&gt;" />
+      <Button fx:id="btnPause" disable="true" layoutX="404.0" layoutY="59.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="112.0" text="ㅣㅣ" />
+      <Button fx:id="btnStop" disable="true" layoutX="404.0" layoutY="93.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="112.0" text="ㅁ" />
+      <Label layoutX="404.0" layoutY="198.0" text="Vloum" />
+      <Slider fx:id="sliderVolum" layoutX="404.0" layoutY="217.0" prefHeight="16.0" prefWidth="112.0" showTickMarks="true" />
+      <Label layoutX="387.0" layoutY="127.0" text="시간" />
+      <ProgressBar fx:id="pb" layoutX="384.0" layoutY="150.0" prefHeight="20.0" prefWidth="92.0" progress="0.0" />
+      <ProgressIndicator fx:id="pi" layoutX="488.0" layoutY="147.0" progress="0.0" />
+      <Label fx:id="lbTime" alignment="CENTER" layoutX="384.0" layoutY="176.0" prefHeight="17.0" prefWidth="92.0" text="10/60" />
+   </children>
+</AnchorPane>
