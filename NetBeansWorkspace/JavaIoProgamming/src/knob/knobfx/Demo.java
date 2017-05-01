@@ -1,5 +1,5 @@
 
-package knobfx;
+package knob.knobfx;
 
 import java.io.IOException;
 import javafx.application.Application;

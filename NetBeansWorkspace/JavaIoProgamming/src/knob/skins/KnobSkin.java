@@ -1,4 +1,4 @@
-package skins;
+package knob.skins;
 
 
 import javafx.scene.canvas.Canvas;
@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import knobfx.Knob;
+import knob.knobfx.Knob;
 
 /**
  *
@@ -87,11 +87,14 @@ public class KnobSkin extends SkinBase<Knob>{
             gc.fillOval(center_radiusX, center_radiusY, radius,radius);
             gc.setFill(getSkinnable().getTickMarkColor());
         }
+		
+		
 
            //drawKnobStroke(centerX,centerY);
            //drawKnob(centerX,centerY);
 
-           drawMarkerPoint(gc); 
+           drawMarkerPoint(gc);
+		   gc.setFill(getSkinnable().getMarkerColor());
            drawMarkerTickMarks(gc);
            
            //drawMaxLabel(gc);

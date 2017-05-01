@@ -1,4 +1,4 @@
-package knobfx;
+package knob.knobfx;
 import com.guigarage.css.CssHelper;
 import com.guigarage.css.DefaultPropertyBasedCssMetaData;
 import com.sun.javafx.css.converters.PaintConverter;
@@ -12,7 +12,7 @@ import javafx.scene.control.Control;
 import javafx.scene.control.Skin;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import skins.KnobSkin;
+import knob.skins.KnobSkin;
 
 /**
  *
@@ -46,7 +46,7 @@ public class Knob extends Control{
         getStyleClass().add("knob");
         
         _minValue   = 0;
-        _maxValue   = 180;
+        _maxValue   = 60;
         _startAngle = 270;
         _angleRange = 180;
         _angleStep  = _angleRange / (_maxValue - _minValue);
@@ -61,8 +61,8 @@ public class Knob extends Control{
     public final void setValue(double val){
         if(val <= 0){
             val = 0;
-        }else if(val >= 180){
-            val = 180;
+        }else if(val >= _maxValue){
+            val = _maxValue;
         }
         valueProperty().setValue(val);
     }
