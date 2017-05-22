@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017. 4. 26, 오전 10:32:40
+    Author     : ijeongsu
+*/
+
+div{
+  background-color: yellow; border: 1px solid black;height: 100px;
+}
+
+.skyblue{
+  background-color: skyblue;
+}
+.btn{
+  border: 1px solid black;height: 70px; padding: 5px; 
+}
+.success{background-color: forestgreen; color:white;}
+.warning{background-color: red; color: white;}
+#goldDiv1{background-color: gold;}
+#goldDiv2{background-color: goldenrod;}

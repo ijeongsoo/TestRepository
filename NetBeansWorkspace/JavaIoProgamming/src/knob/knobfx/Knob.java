@@ -46,7 +46,7 @@ public class Knob extends Control{
         getStyleClass().add("knob");
         
         _minValue   = 0;
-        _maxValue   = 60;
+        _maxValue   = 100;
         _startAngle = 270;
         _angleRange = 180;
         _angleStep  = _angleRange / (_maxValue - _minValue);

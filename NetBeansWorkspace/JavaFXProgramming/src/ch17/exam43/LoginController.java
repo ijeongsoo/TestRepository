@@ -7,13 +7,17 @@ package ch17.exam43;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
@@ -29,21 +33,44 @@ public class LoginController implements Initializable {
   private BorderPane login;
   @FXML
   private Button btnMain;
+	@FXML
+	private Label lblLogin;
+	Thread thread ;
 
   /**
    * Initializes the controller class.
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
+	  System.gc();
     btnMain.setOnAction((event) -> {
 	handleBtnMain(event);
     });
+      thread = new Thread(() -> {
+	    while(true){
+		    try{
+			    Thread.sleep(1000);
+			    Platform.runLater(() -> {
+				    lblLogin.setText("aaa");
+			    });
+			    
+		    } catch (InterruptedException ex) {
+			    break;
+		    }
+	    }
+    
+    });
+     thread.start();
+     
   }  
 
   
   
   private void handleBtnMain(ActionEvent event) {
     //RootController.rootPane.getChildren().remove(1);
+    
+   
+    //thread.interrupt();
     StackPane rootPane=(StackPane)btnMain.getScene().getRoot();
     login.setOpacity(1);
 	
@@ -57,10 +84,18 @@ public class LoginController implements Initializable {
 	  
     Timeline timeline = new Timeline();
     timeline.getKeyFrames().add(keyFrame);
-	
+    
     timeline.play();
+    
 	
     
     
   }
+
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("끝");
+	}
+  
+  
 }

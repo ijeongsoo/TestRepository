@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 
-<BorderPane  xmlns:fx="http://javafx.com/fxml" 
-	fx:id="login" prefHeight="500" prefWidth="350" fx:controller="ch17.exam43.LoginController"
-	>
+<BorderPane fx:id="login" prefHeight="500" prefWidth="350" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch17.exam43.LoginController">
 	<top>
 		<BorderPane style="-fx-background-color: #eaeaea;">
 			<left>
-				<Button fx:id="btnMain" text="메인"/>
+				<Button fx:id="btnMain" text="메인" />
 			</left>
 			<center>			
-				<Label alignment="CENTER" prefWidth="215" text="로그인 화면" />
+				<Label fx:id="lblLogin" alignment="CENTER" prefWidth="215" text="로그인 화면" />
 			</center>
 			<padding>
 				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -23,6 +24,50 @@
 	
    <center>
       <VBox style="-fx-background-color: #ffff00;">
-      </VBox>
+         <children>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker layoutX="30.0" layoutY="100.0" />
+                        <Hyperlink layoutX="93.0" layoutY="147.0" text="Hyperlink" />
+                        <ColorPicker layoutX="100.0" layoutY="56.0" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                        <Pagination layoutX="145.0" layoutY="-28.0" prefHeight="200.0" prefWidth="200.0" />
+                        <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="75.0" layoutY="72.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <FlowPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox prefWidth="150.0" />
+                  <Label text="Label" />
+                  <ListView prefHeight="200.0" prefWidth="200.0" />
+                  <MediaView fitHeight="200.0" fitWidth="200.0" />
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <ColorPicker />
+                  <Button mnemonicParsing="false" text="Button" />
+               </children>
+            </FlowPane>
+         </children></VBox>
    </center>		
 </BorderPane>
