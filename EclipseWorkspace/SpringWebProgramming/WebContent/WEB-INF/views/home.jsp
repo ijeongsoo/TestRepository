@@ -75,5 +75,14 @@
     <h4>의존성 주입</h4>
     <a href="di/exam01" class="btn btn-primary">버튼</a>
     <a href="di/exam02" class="btn btn-primary">버튼</a>
+    
+    <h4>리다이렉트(재요청)</h4>
+    <a href="redirect/list" class="btn btn-primary">게시물 목록</a>
+    <a href="redirect/write" class="btn btn-primary">게시물 쓰기</a>
+    
+    <h4>JDBC</h4>
+    <a href="jdbc/exam01" class="btn btn-primary">글쓰기</a>
+    <a href="jdbc/exam02" class="btn btn-primary">글쓰기</a>
+    <a href="jdbc/exam03" class="btn btn-primary">회원가입</a>
   </body>
 </html>
