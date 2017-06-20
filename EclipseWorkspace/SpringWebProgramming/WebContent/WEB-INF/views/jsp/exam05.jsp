@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html; charset=UTF-8" %>
-<%@page import="com.mycompany.myapp.dto.Member" %>
+<%@page import="com.mycompany.myapp.dto.Exam07Member" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <!DOCTYPE html>

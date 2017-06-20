@@ -15,8 +15,8 @@ import hardware.sensor.UltrasonicSensor;
  */
 public class UltrasonicSensorBuzzerTest {
 	public static void main(String[] args) throws InterruptedException {
-		UltrasonicSensor us = new UltrasonicSensor(RaspiPin.GPIO_01, RaspiPin.GPIO_02);
-		ActiveBuzzer activeBuzzer = new ActiveBuzzer(RaspiPin.GPIO_00);
+		UltrasonicSensor us = new UltrasonicSensor(RaspiPin.GPIO_28, RaspiPin.GPIO_29);
+		ActiveBuzzer activeBuzzer = new ActiveBuzzer(RaspiPin.GPIO_24);
 		while(true){
 			System.out.println("거리(Cm):"+us.getDistance());
 			Thread.sleep(50);

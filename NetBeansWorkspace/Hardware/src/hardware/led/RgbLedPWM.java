@@ -64,7 +64,7 @@ public class RgbLedPWM {
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		RgbLedPWM rlp = new RgbLedPWM(RaspiPin.GPIO_00, RaspiPin.GPIO_02, RaspiPin.GPIO_03);
+		RgbLedPWM rlp = new RgbLedPWM(RaspiPin.GPIO_04, RaspiPin.GPIO_05, RaspiPin.GPIO_06);
 
 		rlp.ledColorSet(255, 0, 0); Thread.sleep(1000);
 		rlp.ledColorSet(0, 255, 0); Thread.sleep(1000);

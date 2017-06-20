@@ -63,7 +63,7 @@ public class UltrasonicSensor {
 		start=System.nanoTime();
 		
 		//echoPin이 Low가 될때까지 기다림
-		count=0;
+		//count=0;
 		while(echoPin.isHigh()){
 		count++;
 			if(count>50000){
@@ -99,10 +99,10 @@ public class UltrasonicSensor {
 	//method
 	public static void main(String[] args) throws InterruptedException {
 		
-		UltrasonicSensor us = new UltrasonicSensor(RaspiPin.GPIO_00, RaspiPin.GPIO_01);
+		UltrasonicSensor us = new UltrasonicSensor(RaspiPin.GPIO_28, RaspiPin.GPIO_29);
 		while(true){
 			System.out.println("거리(Cm):"+us.getDistance());
-			Thread.sleep(100);
+			Thread.sleep(300);
 		}
 	}
 }

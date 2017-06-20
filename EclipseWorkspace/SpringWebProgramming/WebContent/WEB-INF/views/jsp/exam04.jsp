@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html; charset=UTF-8" %>
-<%@page import="com.mycompany.myapp.dto.Member" %>
+<%@page import="com.mycompany.myapp.dto.Exam07Member" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,7 +23,7 @@
     </div>
     
     <div>
-	<%Member member = new Member("홍길동", 30);%> 
+	<%Exam07Member member = new Exam07Member("홍길동", 30);%> 
 	이름:<%=member.getName()%>
 	나이:<%=member.getAge()%>
     </div>
@@ -37,9 +37,9 @@
     </div>
     
     <div>
-	<%request.setAttribute("member", new Member("홍길동", 30));%>
+	<%request.setAttribute("member", new Exam07Member("홍길동", 30));%>
 	이름:${member.name}
-	이름:<%=((Member)request.getAttribute("member")).getName()%>
+	이름:<%=((Exam07Member)request.getAttribute("member")).getName()%>
 	나이:${member.age}
     </div>
     

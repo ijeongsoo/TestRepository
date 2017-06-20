@@ -63,13 +63,12 @@ public class SG90Servo {
 	
 	public static void main(String[] args) throws InterruptedException {
 		SG90Servo sg90servo = new SG90Servo(RaspiPin.GPIO_01, 8, 27);
-		for(int i=0; i<180; i+=10){
-			sg90servo.setAngle(i);
-			Thread.sleep(500);
-			
-		}
 		sg90servo.setAngle(0);
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		sg90servo.setAngle(90);
+		Thread.sleep(3000);
+		sg90servo.setAngle(180);
+		Thread.sleep(3000);
 	}
 	
 }

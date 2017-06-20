@@ -30,22 +30,22 @@ public class PCA9685 {
 	
 	private PCA9685GpioProvider gpioProvider;
 	
-	private static final Pin PWM_00=PCA9685Pin.PWM_00;
-	private static final Pin PWM_01=PCA9685Pin.PWM_01;
-	private static final Pin PWM_02=PCA9685Pin.PWM_02;
-	private static final Pin PWM_03=PCA9685Pin.PWM_03;
-	private static final Pin PWM_04=PCA9685Pin.PWM_04;
-	private static final Pin PWM_05=PCA9685Pin.PWM_05;
-	private static final Pin PWM_06=PCA9685Pin.PWM_06;
-	private static final Pin PWM_07=PCA9685Pin.PWM_07;
-	private static final Pin PWM_08=PCA9685Pin.PWM_08;
-	private static final Pin PWM_09=PCA9685Pin.PWM_09;
-	private static final Pin PWM_10=PCA9685Pin.PWM_10;
-	private static final Pin PWM_11=PCA9685Pin.PWM_11;
-	private static final Pin PWM_12=PCA9685Pin.PWM_12;
-	private static final Pin PWM_13=PCA9685Pin.PWM_13;
-	private static final Pin PWM_14=PCA9685Pin.PWM_14;
-	private static final Pin PWM_15=PCA9685Pin.PWM_15;
+	public static final Pin PWM_00=PCA9685Pin.PWM_00;
+	public static final Pin PWM_01=PCA9685Pin.PWM_01;
+	public static final Pin PWM_02=PCA9685Pin.PWM_02;
+	public static final Pin PWM_03=PCA9685Pin.PWM_03;
+	public static final Pin PWM_04=PCA9685Pin.PWM_04;
+	public static final Pin PWM_05=PCA9685Pin.PWM_05;
+	public static final Pin PWM_06=PCA9685Pin.PWM_06;
+	public static final Pin PWM_07=PCA9685Pin.PWM_07;
+	public static final Pin PWM_08=PCA9685Pin.PWM_08;
+	public static final Pin PWM_09=PCA9685Pin.PWM_09;
+	public static final Pin PWM_10=PCA9685Pin.PWM_10;
+	public static final Pin PWM_11=PCA9685Pin.PWM_11;
+	public static final Pin PWM_12=PCA9685Pin.PWM_12;
+	public static final Pin PWM_13=PCA9685Pin.PWM_13;
+	public static final Pin PWM_14=PCA9685Pin.PWM_14;
+	public static final Pin PWM_15=PCA9685Pin.PWM_15;
 	
 	private int period; 
 	
@@ -128,34 +128,34 @@ public class PCA9685 {
 //		pca9685.setDuration(PWM_01, 2700);
 //		Thread.sleep(2000);
 //		
-//		pca9685.setDuration(PWM_02, 800);
+//		pca9685.setDuration(PWM_11, 800);
 //		Thread.sleep(2000);
-//		pca9685.setDuration(PWM_02, (800+2700)/2);
+//		pca9685.setDuration(PWM_11, (800+2700)/2);
 //		Thread.sleep(2000);
-//		pca9685.setDuration(PWM_02, 2700);
+//		pca9685.setDuration(PWM_11, 2700);
 //		Thread.sleep(2000);
 		
 		
-		pca9685.setStep(PWM_00, 164);
+		pca9685.setStep(PWM_11, 184);
 		Thread.sleep(2000);
-		pca9685.setStep(PWM_00, 358);
+		pca9685.setStep(PWM_11, 358);
 		Thread.sleep(2000);
-		pca9685.setStep(PWM_00, 552);
-		Thread.sleep(2000);
-		
-		pca9685.setStep(PWM_01, 164);
-		Thread.sleep(2000);
-		pca9685.setStep(PWM_01, 358);
-		Thread.sleep(2000);
-		pca9685.setStep(PWM_01, 552);
+		pca9685.setStep(PWM_11, 592);
 		Thread.sleep(2000);
 		
-		pca9685.setStep(PWM_02, 164);
-		Thread.sleep(2000);
-		pca9685.setStep(PWM_02, 358);
-		Thread.sleep(2000);
-		pca9685.setStep(PWM_02, 552);
-		Thread.sleep(2000);
+//		pca9685.setStep(PWM_01, 164);
+//		Thread.sleep(2000);
+//		pca9685.setStep(PWM_01, 358);
+//		Thread.sleep(2000);
+//		pca9685.setStep(PWM_01, 552);
+//		Thread.sleep(2000);
+//		
+//		pca9685.setStep(PWM_02, 164);
+//		Thread.sleep(2000);
+//		pca9685.setStep(PWM_02, 358);
+//		Thread.sleep(2000);
+//		pca9685.setStep(PWM_02, 552);
+//		Thread.sleep(2000);
 	}
 	
 	

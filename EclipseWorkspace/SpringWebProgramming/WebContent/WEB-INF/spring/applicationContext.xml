@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- Connection Pool(DataSource) -->
+	<bean name="dataSource1"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.3.102:1521:orcl"></property>
+		<property name="user" value="iotuser"></property>
+		<property name="password" value="iot12345"></property>
+		<property name="maxPoolSize" value="1"/>
+		<property name="initialPoolSize" value="1"/>
+		<property name="acquireIncrement" value="1"></property>
+		<property name="minPoolSize" value="1"/>
 
+	</bean>
+	<!-- jdbcTemplate 설정 -->
+	<bean name="jdbcTemplate1"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource1"></property>
+	
+	</bean>
+	
+	<bean name="dataSource2"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@117.17.198.43:1531:orcl"></property>
+		<property name="user" value="iotuser"></property>
+		<property name="password" value="iot12345"></property>
+		<property name="maxPoolSize" value="1"/>
+		<property name="initialPoolSize" value="1"/>
+		<property name="acquireIncrement" value="1"></property>
+		<property name="minPoolSize" value="1"/>
 
+	</bean>
+
+	<bean name="jdbcTemplate2"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource2"></property>
+	
+	</bean>
+	
+	 <!-- mybatis 설정 -->
+	<bean name="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource1"></property>
+		<property name="mapperLocations" value="/WEB-INF/mybatis/*.xml"></property>
+	</bean>
+	<bean name="sqlSessionTemplate"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory"/>
+	</bean>
+	
+	<bean name="sqlSessionFactory2"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource2"></property>
+		<property name="mapperLocations" value="/WEB-INF/mybatis/*.xml"></property>
+	</bean>
+	<bean name="sqlSessionTemplate2"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory2"/>
+	</bean>
+	
+	<!-- 트랜잭션 설정 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource2"></property>
+	</bean>
+	
+	<tx:annotation-driven/>
 </beans>
