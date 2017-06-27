@@ -294,7 +294,7 @@
 
 				</br>
 				<div class="form-group">
-					<label class="col-sm-3 control-label""></label>
+					<label class="col-sm-3 control-label"></label>
 					<div class="col-sm-6">
 						<button id="join" name="join" class="btn btn-primary col-sm-12"
 							type="submit">회원가입</button>
