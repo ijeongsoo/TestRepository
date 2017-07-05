@@ -113,6 +113,8 @@ public class HomeController {
 		jsonObject = new JSONObject(json);
 		model.addAttribute("backTireSpeed", jsonObject.getString("speed"));
 		model.addAttribute("backTireDirection", jsonObject.getString("direction"));
+		
+		
 
 		coapClient.shutdown();
 
