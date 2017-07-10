@@ -34,7 +34,7 @@ public class photoresistorSensorHandler extends TextWebSocketHandler implements 
 	@PostConstruct
 	public void init() {
 		coapClient = new CoapClient();
-		coapClient.setURI("coap://192.168.3.36/photoresistor");
+		coapClient.setURI("coap://192.168.3.36/photoresistorsensor");
 		coapObserveRelateion=coapClient.observe(new CoapHandler() {
 			
 			@Override

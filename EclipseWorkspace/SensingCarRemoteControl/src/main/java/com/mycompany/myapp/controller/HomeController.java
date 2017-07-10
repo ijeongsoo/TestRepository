@@ -36,8 +36,8 @@ public class HomeController {
 		coapResponse = coapClient.post(json, MediaTypeRegistry.APPLICATION_JSON);
 		json = coapResponse.getResponseText();
 		jsonObject = new JSONObject(json);
-		model.addAttribute("leftRight", jsonObject.getString("leftRight"));
-		model.addAttribute("upDown", jsonObject.getString("upDown"));
+		model.addAttribute("leftRight", jsonObject.getString("leftright"));
+		model.addAttribute("upDown", jsonObject.getString("updown"));
 
 		// ------------------------------------------------------------------------
 		jsonObject = new JSONObject();
@@ -129,8 +129,8 @@ public class HomeController {
 
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("command", command);
-		jsonObject.put("leftRight", leftRight);
-		jsonObject.put("upDown", upDown);
+		jsonObject.put("leftright", leftRight);
+		jsonObject.put("updown", upDown);
 		String reqJson = jsonObject.toString();
 
 		CoapClient coapClient = new CoapClient();
